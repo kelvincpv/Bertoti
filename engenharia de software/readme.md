@@ -21,10 +21,10 @@ O segundo trecho destaca como os engenheiros de software pensam na **“programa
 
 ---
 
-## Atividade 4 – Diagrama UML da classe **Livro**
+## Atividade 4 – Diagramas UML das classes **Livro** e **EstanteLivro**
 
 ```text
-+---------------------------+
++---------------------------+  
 |           Livro           |
 +---------------------------+
 | - titulo: String          |
@@ -39,6 +39,22 @@ O segundo trecho destaca como os engenheiros de software pensam na **“programa
 | + get/set (cada campo)    |
 | + toString(): String      |
 +---------------------------+
+
++-------------------------------+
+|         EstanteLivro          |
++-------------------------------+
+| - nomeEstante: String         |
+| - livros: List<Livro>         |
++-------------------------------+
+| + EstanteLivro(nome:String)   |
+| + addLivro(Livro): void       |
+| + getLivros(): List<Livro>    |
+| + buscarPorTitulo(String):    |
+|       List<Livro>             |
+| + buscarPorAutor(String):     |
+|       List<Livro>             |
+| + toString(): String          |
++-------------------------------+
 ```
 
 ---
@@ -125,29 +141,7 @@ public class EstanteLivro {
 
 ---
 
-## Atividade 6 – Diagrama UML da classe **EstanteLivro**
-
-```text
-+-------------------------------+
-|         EstanteLivro          |
-+-------------------------------+
-| - nomeEstante: String         |
-| - livros: List<Livro>         |
-+-------------------------------+
-| + EstanteLivro(nome:String)   |
-| + addLivro(Livro): void       |
-| + getLivros(): List<Livro>    |
-| + buscarPorTitulo(String):    |
-|       List<Livro>             |
-| + buscarPorAutor(String):     |
-|       List<Livro>             |
-| + toString(): String          |
-+-------------------------------+
-```
-
----
-
-## Atividade 7 – Classe de Teste
+## Atividade 6 – Teste automatizado
 
 ```java
 public class TestarEstanteLivro {
@@ -173,34 +167,4 @@ public class TestarEstanteLivro {
         System.out.println("Busca por autor 'Machado de Assis': " + estante.buscarPorAutor("Machado de Assis"));
     }
 }
-```
-
----
-
-## Atividade 8 – Diagrama completo Biblioteca
-
-```mermaid
-classDiagram
-class Livro {
-  - String titulo
-  - String autor
-  - int paginas
-  - String isbn
-  + Livro(String, String, int, String)
-  + getters/setters
-  + toString(): String
-}
-
-class EstanteLivro {
-  - String nomeEstante
-  - List~Livro~ livros
-  + EstanteLivro(String)
-  + addLivro(Livro): void
-  + getLivros(): List~Livro~
-  + buscarPorTitulo(String): List~Livro~
-  + buscarPorAutor(String): List~Livro~
-  + toString(): String
-}
-
-EstanteLivro o-- Livro : contem
 ```
