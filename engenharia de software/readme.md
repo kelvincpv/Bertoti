@@ -53,6 +53,7 @@ O livro faz uma distinção clara entre “apenas programar” e **ser engenheir
 
 * Programar é comparado a aprender a andar de bicicleta: uma habilidade útil, mas limitada.
 * Engenharia de software é como projetar uma ponte ou um avião, exigindo rigor, conhecimento teórico e responsabilidade.
+* O software é um bem intangível, pois não possui forma física — é composto por códigos e instruções digitais, ao contrário de bens tangíveis, como hardware, que podem ser tocados.
 * Com o software presente em tudo — de smartphones a carros autônomos —, a necessidade de **boas práticas e confiabilidade** é crítica.
 
 > “Engenheiros clássicos seguem regras rígidas para evitar que pontes desabem; no software, precisamos do mesmo nível de rigor.”
@@ -172,9 +173,9 @@ A leitura de *Software Engineering at Google* foi transformadora, destacando que
 +---------------------------+
 | + get/set                 |
 | + toString(): String      |
-+---------------------------+
-
-+-------------------------------+
++------------|--------------+
+			 |
++------------|------------------+
 |         EstanteLivro          |
 +-------------------------------+
 | - nomeEstante: String         |
