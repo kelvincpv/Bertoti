@@ -162,32 +162,9 @@ A leitura de *Software Engineering at Google* foi transformadora, destacando que
 
 ### Diagrama UML para uma estante de livros - ![Static Badge](https://img.shields.io/badge/Plant-UML-blue?style=plastic\&logo=UML\&logoSize=auto\&labelColor=b22222)
 
-```
-+---------------------------+
-|           Livro           |
-+---------------------------+
-| - titulo: String          |
-| - autor: String           |
-| - paginas: int            |
-| - isbn: String            |
-+---------------------------+
-| + get/set                 |
-| + toString(): String      |
-+------------|--------------+
-			 |
-+------------|------------------+
-|         EstanteLivro          |
-+-------------------------------+
-| - nomeEstante: String         |
-| - livros: List<Livro>         |
-+-------------------------------+
-| + addLivro(Livro): void       |
-| + removerPorIsbn(String):bool |
-| + buscarPorTitulo(String):List|
-| + buscarPorAutor(String):List |
-| + getLivros(): List<Livro>    |
-+-------------------------------+
-```
+
+<img src="https://res.cloudinary.com/drewfcuv6/image/upload/v1762556426/RP712i8m38RlUugmKwSCyJfauC63i8EWBz1jPHIsHffi5_61V0vVp2uJiUAj-VE5F_dRz9e8AZjvX5i2a0DR7diiuCpUkauaFJBwIBdgpZfD1LZ78bYgtOS8oXewmnioB6_6fQEo3tDFaaQy3yJQiVbUmU5WtdBasizCCAqiyKu6oiLBjwsKIeXYkITuJMXR0RmPS3B-XFuO5_xwuhdo.png">
+
 
 ### Classes para uma estante de livros - ![Static Badge](https://img.shields.io/badge/Java-code-brightgreen?style=plastic\&logo=Java\&logoSize=auto\&labelColor=%23FFFF00)
 
